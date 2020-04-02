@@ -23,12 +23,12 @@ public class Read {
      * <p>
      * 这里我们的目录层级从0开始，0表示我们的目录源头，其中文件和目录的关联标志也是0
      *
-     * @param fileSrc 读入文件源
-     * @param mutiDir 是否多层目录遍历
+     * @param fileSrc         读入文件源
+     * @param mutiDir         是否多层目录遍历
      * @param filterCondition 过滤条件
      * @return 文件数据集合
      */
-    public static ArrayList<fileModle> getFileModles(String fileSrc,  boolean mutiDir, String... filterCondition) {
+    public static ArrayList<fileModle> getFileModles(String fileSrc, boolean mutiDir, String... filterCondition) {
         //如果没有目录信息或者目录为空或者目录不存在，直接返回null
         File file = new File(fileSrc);
         if (fileSrc == null || fileSrc == "" || !file.exists() || file.list() == null) {
@@ -68,19 +68,23 @@ public class Read {
         String fileName;
         int alength;
         int nlength;
+        //获取起始坐标
+        int beginIndex = fileSrc.length();
         //进行遍历
         for (File f : files) {
             absolutePath = f.getAbsolutePath();
             fileName = f.getName();
             alength = absolutePath.length();
             nlength = fileName.length();
+
             if (f.isDirectory()) {
                 //如果是目录，我们需要设置其层级和标志位
                 orderFileQueueQueueLinked.enqueue(new orderFileQueue(f, 1, ++flagNum));
-                fileModles.add(new fileModle(1, flagNum, true, absolutePath.substring(absolutePath.indexOf("\\") + 1, alength - nlength-1), f.getName(), f));
+
+                fileModles.add(new fileModle(1, flagNum, true, absolutePath.substring(beginIndex, alength - nlength - 1), f.getName(), f));
             } else {
                 //如果是文件，我们需要设置其层级和其关联文件标志位
-                fileModles.add(new fileModle(0, 0, false, absolutePath.substring(absolutePath.indexOf("\\") + 1, alength - nlength-1), f.getName(), f));
+                fileModles.add(new fileModle(0, 0, false, absolutePath.substring(beginIndex, alength - nlength - 1), f.getName(), f));
             }
         }
 
@@ -88,6 +92,7 @@ public class Read {
         if (mutiDir == false) {
             return fileModles;
         }
+        beginIndex++;
 
         //创建队列，准备进行入队操作
         Iterator<orderFileQueue> it = orderFileQueueQueueLinked.iterator();
@@ -106,9 +111,9 @@ public class Read {
                     //同样的标志位和层级设置，仍然需要进行层级和标志位设立，其逻辑依据当前目录给出的信息
                     if (f.isDirectory()) {
                         orderFileQueueQueueLinked.enqueue(new orderFileQueue(f, hir + 1, ++flagNum));
-                        fileModles.add(new fileModle(hir + 1, flagNum, true, absolutePath.substring(absolutePath.indexOf("\\") + 1, alength - nlength - 1), f.getName(), f));
+                        fileModles.add(new fileModle(hir + 1, flagNum, true, absolutePath.substring(beginIndex, alength - nlength - 1), f.getName(), f));
                     } else {
-                        fileModles.add(new fileModle(hir + 1, fileFlagNum, false, absolutePath.substring(absolutePath.indexOf("\\") + 1, alength - nlength - 1), f.getName(), f));
+                        fileModles.add(new fileModle(hir + 1, fileFlagNum, false, absolutePath.substring(beginIndex, alength - nlength - 1), f.getName(), f));
                     }
                 }
             }
@@ -118,6 +123,7 @@ public class Read {
 
     /**
      * 文件过滤器
+     *
      * @param firstDir
      * @param compile
      * @return
