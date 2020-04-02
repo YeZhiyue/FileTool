@@ -14,8 +14,8 @@ import java.util.regex.Pattern;
 public class CRUD {
     private String fileSrc = "D:\\helo\\666e889994ztt20 40";
     private String fileOut = "D:\\helo";
-//    private String[] filterCondition = {"Update", "Create"};
-    private String[] filterCondition = {"java"};
+    private String[] filterCondition = {"Update", "Create"};
+//    private String[] filterCondition = {"java"};
 
     @Test
     public void other() {
@@ -28,7 +28,7 @@ public class CRUD {
 
     @Test
     public void read() {
-        ArrayList<fileModle> fileModles = Read.getFileModles(fileSrc, true, null);
+        ArrayList<fileModle> fileModles = Read.getFileModles(fileSrc, true, filterCondition);
         for (fileModle fileModle : fileModles) {
             System.out.println(fileModle);
         }

@@ -95,9 +95,8 @@ public class Read {
         beginIndex++;
 
         //创建队列，准备进行入队操作
-        Iterator<orderFileQueue> it = orderFileQueueQueueLinked.iterator();
-        while (it.hasNext()) {
-            orderFileQueue next = it.next();
+        while (!orderFileQueueQueueLinked.isEmpty()) {
+            orderFileQueue next = orderFileQueueQueueLinked.dequeue();
             int fileFlagNum = next.getFlagNum();
             int hir = next.getHir();
             files = getFiles(next.getFile(), compile);
