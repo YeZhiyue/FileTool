@@ -5,8 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cn/ye/UI/FileTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/ye/UI/FileTool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cn/ye/UI/FileTool.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/ye/UI/FileTool.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/ye/core/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/ye/core/Update.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/文档/介绍" beforeDir="false" afterPath="$PROJECT_DIR$/文档/介绍" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,7 +28,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="21" />
+          <entry key="java" value="22" />
           <entry key="jfd" value="8" />
           <entry key="介绍" value="1" />
         </counts>
@@ -39,14 +37,14 @@
         <counts>
           <entry key="AsciiDoc" value="1" />
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="21" />
+          <entry key="JAVA" value="22" />
           <entry key="JFormDesigner_form" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="5" />
-          <entry key="java" value="4011" />
+          <entry key="java" value="4012" />
           <entry key="txt" value="1" />
           <entry key="介绍" value="101" />
         </counts>
@@ -54,7 +52,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="AsciiDoc" value="101" />
-          <entry key="JAVA" value="4008" />
+          <entry key="JAVA" value="4009" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="RegExp" value="3" />
         </counts>
@@ -62,81 +60,35 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.70719904">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/cn/ye/UI/FileTool.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2447">
-                  <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
-                  <folding>
-                    <element signature="e#435#817#0" />
-                    <element signature="e#2054#2251#0" />
-                    <marker date="1585889648745" expanded="false" signature="6036:62426" ph="// JFormDesigner - Component initialization - DO NOT MODIFY" />
-                    <marker date="1585889648745" expanded="false" signature="62466:65854" ph="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/cn/ye/core/Read.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="335">
-                  <caret line="122" selection-start-line="122" selection-end-line="141" selection-end-column="5" />
-                  <folding>
-                    <element signature="docComment;method#getFileModles#1;class#Read#0" />
-                    <element signature="docComment;method#getFiles#0;class#Read#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/cn/ye/core/Update.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="424">
-                  <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
-                  <folding>
-                    <element signature="docComment;method#getFiles#0;class#Update#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/cn/ye/UI/FileTool.jfd">
-              <provider selected="true" editor-type-id="JFormDesigner">
-                <state propertiesWidth="226" structureHeight="321" />
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/test/CRUD.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2040">
-                  <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
-                  <folding>
-                    <element signature="e#814#815#0" expanded="true" />
-                    <element signature="e#914#915#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/文档/介绍">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/ye/UI/FileTool.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3247">
+              <caret line="365" column="71" selection-start-line="365" selection-start-column="71" selection-end-line="365" selection-end-column="71" />
+              <folding>
+                <element signature="e#435#817#0" />
+                <element signature="e#2054#2251#0" />
+                <marker date="1585894579900" expanded="true" signature="6036:62797" ph="// JFormDesigner - Component initialization - DO NOT MODIFY" />
+                <marker date="1585894579900" expanded="false" signature="62837:66225" ph="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cn/ye/UI/FileTool.jfd">
+          <provider selected="true" editor-type-id="JFormDesigner">
+            <state propertiesWidth="617" structureHeight="321" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/文档/介绍">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -155,6 +107,7 @@
       <find>deleteFaileTextField1</find>
       <find>radioButton3</find>
       <find>849</find>
+      <find>8</find>
     </findStrings>
     <replaceStrings>
       <replace>##</replace>
@@ -180,9 +133,9 @@
         <option value="$PROJECT_DIR$/src/cn/ye/UI/test.java" />
         <option value="$PROJECT_DIR$/src/cn/ye/UI/test.jfd" />
         <option value="$PROJECT_DIR$/文档/介绍" />
-        <option value="$PROJECT_DIR$/src/cn/ye/UI/FileTool.jfd" />
         <option value="$PROJECT_DIR$/src/cn/ye/UI/FileTool.java" />
         <option value="$PROJECT_DIR$/src/cn/ye/core/Update.java" />
+        <option value="$PROJECT_DIR$/src/cn/ye/UI/FileTool.jfd" />
       </list>
     </option>
   </component>
@@ -398,7 +351,7 @@
       <workItem from="1585790572440" duration="14486000" />
       <workItem from="1585811923404" duration="629000" />
       <workItem from="1585872856143" duration="10974000" />
-      <workItem from="1585889314127" duration="3223000" />
+      <workItem from="1585889314127" duration="5495000" />
     </task>
     <task id="LOCAL-00001" summary="2">
       <created>1585803637288</created>
@@ -421,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585881479273</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="2">
+      <created>1585892848573</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1585892848573</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -457,20 +417,20 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29312000" />
+    <option name="totallyTimeSpent" value="31584000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11886994" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11886994" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="设计器" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32975295" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.06337272" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.06337272" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -612,23 +572,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/CRUD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
-          <folding>
-            <element signature="e#814#815#0" expanded="true" />
-            <element signature="e#914#915#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/文档/介绍">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/ye/UI/FileTool.jfd">
-      <provider selected="true" editor-type-id="JFormDesigner">
-        <state propertiesWidth="226" structureHeight="321" />
+    <entry file="file://$PROJECT_DIR$/src/cn/ye/core/Update.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="64" column="24" lean-forward="true" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+          <folding>
+            <element signature="docComment;method#getFiles#0;class#Update#0" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/ye/core/Read.java">
@@ -642,27 +596,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/ye/UI/FileTool.java">
+    <entry file="file://$PROJECT_DIR$/test/CRUD.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2447">
-          <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
+        <state relative-caret-position="762">
+          <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
           <folding>
-            <element signature="e#435#817#0" />
-            <element signature="e#2054#2251#0" />
-            <marker date="1585889648745" expanded="false" signature="6036:62426" ph="// JFormDesigner - Component initialization - DO NOT MODIFY" />
-            <marker date="1585889648745" expanded="false" signature="62466:65854" ph="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
+            <element signature="e#814#815#0" expanded="true" />
+            <element signature="e#914#915#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/ye/core/Update.java">
+    <entry file="file://$PROJECT_DIR$/src/cn/ye/UI/FileTool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+        <state relative-caret-position="-3247">
+          <caret line="365" column="71" selection-start-line="365" selection-start-column="71" selection-end-line="365" selection-end-column="71" />
           <folding>
-            <element signature="docComment;method#getFiles#0;class#Update#0" />
+            <element signature="e#435#817#0" />
+            <element signature="e#2054#2251#0" />
+            <marker date="1585894579900" expanded="true" signature="6036:62797" ph="// JFormDesigner - Component initialization - DO NOT MODIFY" />
+            <marker date="1585894579900" expanded="false" signature="62837:66225" ph="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/ye/UI/FileTool.jfd">
+      <provider selected="true" editor-type-id="JFormDesigner">
+        <state propertiesWidth="617" structureHeight="321" />
       </provider>
     </entry>
   </component>

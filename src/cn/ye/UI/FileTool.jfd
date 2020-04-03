@@ -4,8 +4,8 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq t {space :::p, comp tabbedPane1:::::x, space :::p}}"
-			"$verticalGroup": "par l {seq t {space :::p, comp tabbedPane1::::558:x, space :::p}}"
+			"$horizontalGroup": "par l {seq l {space :::p, comp tabbedPane1::::811:x, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp tabbedPane1::::486:x, space :::p}}"
 		} ) {
 			name: "this"
 			add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
@@ -13,8 +13,8 @@ new FormModel {
 				add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
 					name: "tabbedPane4"
 					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-						"$horizontalGroup": "par l {seq t {space :::p, par l {seq t {comp label3::::141:x, space :p:76:p}, seq {par l:::p {comp readButton::::192:x, comp label2::l:::x, comp readMutiDir::l::192:x, comp readFileSrc::l::192:x, comp label4::l::192:x, comp scrollPane2::l::192:x}, space :::x}}, par l {comp label1:::::x, comp scrollPane1:::p:602:p}, space :::p}}"
-						"$verticalGroup": "par l {seq t {space :::p, par l:::p {comp readButton:::p::p, seq {comp label1:::::x, space :6:6:p}}, par l {seq {comp label2:::p:25:p, space :::p, comp readMutiDir:::p::p, space :::p, comp label3:::p:30:p, space :::p, comp readFileSrc:::p:30:p, space :::p, comp label4::::34:x, space :::p, comp scrollPane2:::p:284:p, space :::p}, comp scrollPane1::::458:x}}}"
+						"$horizontalGroup": "par l {seq {comp readButton:::p:192:p, space :::p, comp label1::::66:x, space :p:547:p}, seq {par l:::p {comp label2::::192:x, comp readMutiDir::::192:x, comp readFileSrc::::192:x, comp label3::::192:x, comp scrollPane2::t::192:x, comp label4::t::192:x}, space :::p, comp scrollPane1::::607:x, space :::p}}"
+						"$verticalGroup": "par l {seq t {space :::p, par b {comp readButton::b:p::p, comp label1::b:p:24:p}, space :3:3:p, par l {seq {comp label2:::p:25:p, space :::p, comp readMutiDir:::p:19:p, space :::p, comp label3:::p:30:p, space :::p, comp readFileSrc:::p:38:p, space :::x, comp label4:::p:28:p, space :::p, comp scrollPane2:::p:210:p}, comp scrollPane1:::::x}, space :p:20:p}}"
 					} ) {
 						name: "panel1"
 						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
@@ -71,8 +71,8 @@ new FormModel {
 				add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
 					name: "tabbedPane5"
 					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-						"$horizontalGroup": "par l {seq t {space ::627:x, par l {comp label17:::p:197:p, comp deleteFaileTextField1::::0:x}, space :::p}};par l {seq {space :0:0:p, par l {comp deleteButton2::l:p:192:p, comp label7:::p:192:p, comp deleteMutiDir2:::p:192:p, comp label6:::p:122:p, comp deleteFileSrc2:::p:192:p, comp label5:::p:192:p, seq {space :1:1:p, comp deleteFilterCondition2:::p:190:p}}, space :::p, par l {comp deleteTextArea2::::416:x, comp label8::::416:x}, space :p:217:p}}"
-						"$verticalGroup": "par l {seq l {comp label17:::p:25:p, space u:::p, comp deleteFaileTextField1::::451:x, space :::p}};par l {seq {space :0:0:x, par l {comp deleteButton2:::p::p, comp label8:::p:24:p}, space :::p, par l {seq {comp label7:::p:25:p, space :6:6:p, comp deleteMutiDir2:::p::p, space :6:6:p, comp label6:::p:30:p, space :6:6:p, comp deleteFileSrc2:::p::p, space :6:6:p, comp label5:::p:22:p, space :7:7:p, comp deleteFilterCondition2:::p:282:p}, seq {space :1:1:p, comp deleteTextArea2:::p:444:p}}, space ::12:x}}"
+						"$horizontalGroup": "par l {seq {par l {seq l {space :::p, comp deleteButton2:::p:192:p, space u:::p, comp label8::::121:x, space :p:277:p, comp label17:::p:197:p}, seq l {comp label7:::p:192:p, space :::p, comp deleteTextArea2:::p:403:p, space :::p, comp deleteFaileTextField1::::198:x}}, space :::p}};par l {seq {par l {par l:::p {comp deleteMutiDir2::::192:x, comp label5::::192:x, comp label6::l::192:x, comp deleteFileSrc2::l::192:x}, seq l {space :p:1:p, comp deleteFilterCondition2:::p:190:p}}, space ::619:x}}"
+						"$verticalGroup": "par l {seq t {par l {par b {comp label8::b:p:24:p, comp deleteButton2::b:p::p}, comp label17::t:p:25:p}, space u:::p, par l {seq {comp label7:::p:25:p, space :0:349:x}, seq l {space :4:4:p, par l {comp deleteFaileTextField1::l::370:x, comp deleteTextArea2::::370:x}}}, space :::p}};par l {seq {space :0:84:x, comp deleteMutiDir2:::p::p, space :::p, comp label6:::p:30:p, space :::p, comp deleteFileSrc2:::p:30:p, space :::p, comp label5:::p:22:p, space :p:7:p, comp deleteFilterCondition2:::p:206:p, space :::x}}"
 					} ) {
 						name: "panel2"
 						add( new FormComponent( "javax.swing.JTextArea" ) {
@@ -128,8 +128,8 @@ new FormModel {
 				add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
 					name: "tabbedPane7"
 					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-						"$horizontalGroup": "par l {seq l {space :::p, par l {seq {space :0:0:x, comp createRule:::p:203:p}, seq {par l {comp label9::l:p:192:p, comp label12:::p::p, comp createDirNum:::p:131:p}, space :0:0:x}}, space s:::p, par l {seq l {comp label23:::p:332:p, space :90:90:p, comp label24:::p:176:p}, seq l {space :1:1:p, comp createTextArea1:::p:414:p, space :8:8:p, comp createFaileTextArea1:::p:174:p}}, space :::p}};par l {seq {space :0:0:x, par l {comp createButton1:::p:192:p, comp label11:::p:192:p, comp createIsMKDir1:::p:192:p, comp label10:::p:122:p, comp createFileOut1:::p:192:p}, space :0:638:x}, seq l {space :p:1:p, comp readFilterCondition3:::p:199:p, space ::631:x}}"
-						"$verticalGroup": "par l {seq {space :::p, par l {seq l {space :1:1:p, comp label23:::p:24:p}, comp label24:::p:27:p}, par l {seq {space :7:7:p, par l {comp createTextArea1:::p:447:p, comp createFaileTextArea1:::p:447:p}}, seq l {space :p:121:p, comp label12:::p::p, space :8:8:p, comp createDirNum:::p::p, space :::p, comp label9:::p:22:p, space :::p, comp createRule:::p::p}}, space ::7:x}};par l {seq {space :0:0:x, comp createButton1:::p::p, space :0:0:p, comp label11:::p:25:p, space :6:6:p, comp createIsMKDir1:::p::p, space :6:6:p, comp label10:::p:30:p, space :6:6:p, comp createFileOut1:::p::p, space :p:135:p, comp readFilterCondition3:::p:182:p, space :0:24:x}}"
+						"$horizontalGroup": "par l {seq l {space :::p, par l {comp createButton1::l:::x, comp label11::l:::x, comp createIsMKDir1::l:::x, comp label10::l:::x, comp createFileOut1::l:::x, seq {space :6:6:p, comp label12:::p::p, space u:::p, comp createDirNum:::::x}, comp label9::l:::x, seq {par l {comp createRule:::p:203:p, comp readFilterCondition3:::p:199:p}, space :0:0:x}}, space :::p, par l {seq l {comp label23:::p:332:p, space :90:90:p, comp label24:::p:176:p}, seq l {space :p:1:p, comp createTextArea1:::p:414:p, space :p:8:p, comp createFaileTextArea1:::p:174:p}}, space :::p}}"
+						"$verticalGroup": "par l {seq {space :::p, par l {seq l {space :1:1:p, par b {comp label23::b:p:24:p, comp createButton1::b:p::p}}, comp label24:::p:27:p}, par l {seq l {space :p:6:p, comp label11:::p:25:p, space :::p, comp createIsMKDir1:::p::p, space :::p, comp label10:::p:30:p, space :::p, comp createFileOut1:::p::p, space :p:5:p, par l {comp label12:::p::p, comp createDirNum:::p::p}, space :::p, comp label9:::p:22:p, space :::p, comp createRule:::p::p, space :::p, comp readFilterCondition3:::p:149:p}, seq l {space :3:3:p, par t:::p {comp createFaileTextArea1::::379:x, comp createTextArea1::::379:x}}}, space ::3:x}}"
 					} ) {
 						name: "panel3"
 						add( new FormComponent( "javax.swing.JTextArea" ) {
@@ -193,8 +193,8 @@ new FormModel {
 						"title": "根据特殊的规则创建文件"
 					} )
 					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-						"$horizontalGroup": "par l {seq l {comp label18:::p:192:p, space :p:24:p, comp scrollPane3::::427:x, space :::p, par l:::p {comp label22::::176:x, comp scrollPane4::::176:x}, space :::p}};par l {seq {space :0:0:x, par l {seq {comp createButton2:::p:192:p, space :::p, comp label21:::p:332:p}, comp label20:::p:192:p, comp createIsMKDir2:::p:192:p, comp label19:::p:122:p, comp createFileOut2:::p:192:p}, space :0:300:x}, seq l {space :p:2:p, comp createStrings2:::p:190:p, space ::639:x}}"
-						"$verticalGroup": "par l {seq {space :::p, comp label22:::p:27:p, space :::p, par l {comp scrollPane4:::p:449:p, comp scrollPane3::::0:x}, space :::x}, seq l {space :p:226:p, comp label18:::p:22:p, space :::x}};par l {seq {space :0:0:x, par l {comp createButton2:::p::p, comp label21:::p:24:p}, space :::p, comp label20:::p:25:p, space :6:6:p, comp createIsMKDir2:::p::p, space :6:6:p, comp label19:::p:30:p, space :6:6:p, comp createFileOut2:::p::p, space :p:90:p, comp createStrings2:::p:227:p, space :0:18:x}}"
+						"$horizontalGroup": "par l {seq l {space :::p, par l {par l:::p {comp createFileOut2::l::186:x, comp label19::::186:x, comp label18::::186:x}, comp createStrings2:::p:190:p}, space :::p, par t {comp label22:::p:176:p, seq {comp scrollPane3::::421:x, space :::p, comp scrollPane4:::p:176:p}}, space :::p}};par l {seq {space :0:0:x, par l {seq {comp createButton2:::p:192:p, space :::p, comp label21:::p:332:p}, comp label20:::p:192:p, comp createIsMKDir2:::p:192:p}, space :0:281:x}}"
+						"$verticalGroup": "par l {seq {par l {seq {space :::p, comp label22:::p:27:p, space :::p, par l:::p {comp scrollPane4::::376:x, comp scrollPane3::::376:x}}, seq l {space :p:95:p, comp label19:::p:30:p, space :::p, comp createFileOut2:::p::p, space :::p, comp label18:::p:22:p, space :::p, comp createStrings2:::p:220:p}}, space ::7:x}};par l {seq {space :0:0:x, par l {comp createButton2:::p::p, comp label21:::p:24:p}, space :::p, comp label20:::p:25:p, space :6:6:p, comp createIsMKDir2:::p::p, space :0:336:x}}"
 					} ) {
 						name: "panel5"
 						add( new FormComponent( "javax.swing.JTextArea" ) {
@@ -256,8 +256,8 @@ new FormModel {
 				add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
 					name: "tabbedPane"
 					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-						"$horizontalGroup": "par l {seq l {space :::p, par l {seq {par l {comp updateReDir1:::p::p, comp label28::l:p:192:p, comp updateFilterCondition1::l:p:190:p}, space :p:19:p}, seq t {par l {comp readFilterCondition4:::p:199:p, seq l {space :5:5:p, par l {comp label32:::p:192:p, comp updateRule1:::p:203:p}}}, space u:::p}}, comp scrollPane7:::p:395:p, space :::p, comp scrollPane8:::p:180:p, space ::24:x}};par l {seq {space :0:0:x, par l {seq {comp updateButton1:::p:192:p, space :6:6:p, comp label31:::p:403:p, space :12:12:p, comp label33:::p:192:p}, comp label30:::p:192:p, comp label29:::p:122:p, comp updateFileSrc1:::p:192:p}, space :0:26:x}}"
-						"$verticalGroup": "par l {seq {par l {seq {space :p:121:p, comp updateReDir1:::p::p, space :::p, comp label28:::p:22:p, space :::p, comp updateFilterCondition1:::p:66:p, space :::p, comp label32:::p:22:p, space :6:6:p, comp updateRule1:::p::p, space :15:15:p, comp readFilterCondition4:::p:182:p, space :0:0:x}, seq {space :::x, par l:::p {comp scrollPane7::::457:x, comp scrollPane8::::457:x}}}, space :::p}};par l {seq {space :0:0:x, par l {comp updateButton1:::p::p, comp label31:::p:24:p, seq {space :6:6:p, comp label33:::p::p}}, space :p:6:p, par l {comp label30:::p:25:p, seq {space :13:13:p, comp label29:::p:30:p}}, space :6:6:p, comp updateFileSrc1:::p::p, space :0:379:x}}"
+						"$horizontalGroup": "par l {seq {space :::p, par l {seq l {par l {comp updateRule1::t::0:x, seq t {space :0:0:x, par l {comp label29::t:p:192:p, comp updateReDir1::t:p:192:p, comp label28::t:p:192:p, comp label32::t:p:192:p}}, seq {par l {par t:l::p {comp label30::l::192:x, comp updateFileSrc1::l::192:x}, comp updateFilterCondition1::l:p:192:p, comp readFilterCondition4::l:p:192:p}, space :0:0:x}}, space :::p, comp scrollPane7:::p:395:p, space :::p, comp scrollPane8:::p:206:p, space :::x}, seq l {comp updateButton1:::p:192:p, space s:::p, comp label31:::p:403:p, space :::p, comp label34:::p:192:p, space :0:0:x}}}}"
+						"$verticalGroup": "par l {seq {space :::p, par b {comp updateButton1::b:p::p, comp label31::b:p:24:p, comp label34::b:p::p}, space :::p, par l {comp scrollPane8::l:::x, seq {par l:::p {seq {comp label30:::p:25:p, space :::p, comp label29:::p:30:p, space :p:1:p, comp updateFileSrc1:::p::p, space :::x, comp updateReDir1:::p::p, space :::p, comp label28:::p:22:p, space :::p, comp updateFilterCondition1:::p:66:p, space :::p, comp label32:::p:22:p, space :::p, comp updateRule1:::p::p, space :::p, comp readFilterCondition4:::p:93:p, space :p:12:p}, comp scrollPane7:::p:382:p}, space :0:0:x}}, space :::x}}"
 					} ) {
 						name: "panel6"
 						add( new FormComponent( "javax.swing.JTextArea" ) {
@@ -289,24 +289,10 @@ new FormModel {
 							name: "label31"
 							"text": "数据读取"
 						} )
-						add( new FormComponent( "javax.swing.JRadioButton" ) {
-							name: "updateReDir1"
-							"text": "重命名目录or文件"
-						} )
 						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
 							name: "scrollPane7"
 							add( new FormComponent( "javax.swing.JTextArea" ) {
 								name: "updateTextArea1"
-							} )
-						} )
-						add( new FormComponent( "javax.swing.JLabel" ) {
-							name: "label33"
-							"text": "提取失败的文件"
-						} )
-						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
-							name: "scrollPane8"
-							add( new FormComponent( "javax.swing.JTextArea" ) {
-								name: "updateFaileTextArea1"
 							} )
 						} )
 						add( new FormComponent( "javax.swing.JTextArea" ) {
@@ -322,12 +308,26 @@ new FormModel {
 							name: "label32"
 							"text": "你的创建规则"
 						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label34"
+							"text": "提取失败的文件"
+						} )
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "scrollPane8"
+							add( new FormComponent( "javax.swing.JTextArea" ) {
+								name: "updateFaileTextArea1"
+							} )
+						} )
+						add( new FormComponent( "javax.swing.JRadioButton" ) {
+							name: "updateReDir1"
+							"text": "重命名目录or文件"
+						} )
 					}, new FormLayoutConstraints( null ) {
 						"title": "批量重命名目标文件"
 					} )
 					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-						"$horizontalGroup": "par l {seq t {par l {comp label14:::p:122:p, comp updateFileSrc2::l:p:192:p, comp label27:::p:122:p, seq {space :::p, par l {par l {comp updateFilterCondition2::l:p:190:p, comp label13::t:p:192:p}, comp label25::l:p::p, comp updateRadioButton1::l:p::p, comp updateRadioButton2::l:p::p, comp updateRadioButton3::l:p::p, comp updateFileOut::l:p:192:p}}}, space :p:8:p, comp scrollPane5::::395:x, space u:::p, par l:::p {comp label26::::192:x, comp scrollPane6::::192:x}, space :p:26:p}};par l {seq {space :0:0:x, par l {seq {comp updateButton2:::p:192:p, space :::p, comp label16:::p:403:p}, comp label15:::p:192:p}, space :0:230:x}}"
-						"$verticalGroup": "par l {seq t {space :::p, comp label26:::p::p, space ::8:x, par l {comp scrollPane6::l:p:457:p, par t {seq {comp label14:::p:30:p, space :::p, comp updateFileSrc2:::p::p, space :::p, comp label27:::p:30:p, space :::p, comp updateFileOut:::p::p, space :::p, comp label25:::p::p, space :::p, comp updateRadioButton1:::p::p, space :::p, comp updateRadioButton2:::p::p, space :p:2:p, comp updateRadioButton3:::p::p, space :::p, comp label13:::p:22:p, space :::p, comp updateFilterCondition2:::p:173:p}, comp scrollPane5:::p:457:p}}, space :::p}};par l {seq {space :0:0:x, par l {comp updateButton2:::p::p, comp label16:::p:24:p}, space :::p, comp label15:::p:25:p, space :0:433:x}}"
+						"$horizontalGroup": "par l {seq t {space :::p, par l {par l:::p {comp label15::t::196:x, comp label14::t::196:x, comp updateFileSrc2::::196:x}, par t:l::p {comp updateFilterCondition2::l::192:x, comp label13::l::192:x, comp updateRadioButton3::l::192:x, comp updateRadioButton2::l::192:x, comp updateRadioButton1::l::192:x, comp label25::l::192:x, comp updateFileOut::l::192:x, comp label27::l::192:x}}, space :::p, comp scrollPane5::::373:x, space :::p, par l:::p {comp label26::::218:x, comp scrollPane6::::218:x}, space :::p}};par l {seq {space :0:0:x, comp updateButton2:::p:192:p, space :::p, comp label16:::p:403:p, space :0:210:x}}"
+						"$verticalGroup": "par l {seq t {space :::p, comp label26::::20:x, space :::p, par l {comp scrollPane6::t:p:390:p, par t:t::p {comp scrollPane5:::::x, seq {comp label15:::p:25:p, space :::p, comp label14:::p:30:p, space :::p, comp updateFileSrc2:::p::p, space :::p, comp label27:::p:30:p, space :::p, comp updateFileOut:::p::p, space :::p, comp label25:::p::p, space :::p, comp updateRadioButton1:::p::p, space :::p, comp updateRadioButton2:::p::p, space :::p, comp updateRadioButton3:::p::p, space :p:8:p, comp label13:::p:22:p, space :::p, comp updateFilterCondition2:::p:87:p}}}, space :p:0:p}};par l {seq {space :0:0:x, par l {comp updateButton2:::p::p, comp label16:::p:24:p}, space :0:392:x}}"
 					} ) {
 						name: "panel4"
 						add( new FormComponent( "javax.swing.JTextArea" ) {
@@ -409,7 +409,7 @@ new FormModel {
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 810, 590 )
+			"size": new java.awt.Dimension( 825, 530 )
 		} )
 	}
 }
