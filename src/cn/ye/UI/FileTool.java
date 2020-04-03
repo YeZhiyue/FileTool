@@ -7,6 +7,7 @@ package cn.ye.UI;
 import cn.ye.core.Create;
 import cn.ye.core.Delete;
 import cn.ye.core.Read;
+import cn.ye.core.Update;
 import cn.ye.model.fileModle;
 
 import java.awt.*;
@@ -52,6 +53,14 @@ public class FileTool extends JFrame {
     private String fileOut2;
     private boolean isMKDir2;
     private String[] strings;
+    //Update
+    private String fileSrc1;
+    private String[] filterCondition1;
+    private int dirHibFlag;
+
+    private String fileSrc2;
+    private String[] filterCondition2;
+    private boolean reDir;
 
     //文件读取1
     private StringBuilder getStringBuilder() {
@@ -66,6 +75,7 @@ public class FileTool extends JFrame {
     //文件读取2
     private StringBuilder getFaileBuilder(ArrayList<File> failOpr) {
         StringBuilder builder = new StringBuilder();
+        if (failOpr!=null)
         for (File file : failOpr) {
             builder.append(file.getAbsolutePath() + "\n");
         }
@@ -95,6 +105,42 @@ public class FileTool extends JFrame {
         fileOut2=createFileOut2.getText();
         isMKDir2=createIsMKDir2.isSelected();
         strings=createStrings2.getText().split("\\n");
+    }
+
+    private void initUpdatePra() {
+        //1
+        fileSrc1=updateFileSrc1.getText();
+        reDir = updateReDir1.isSelected();
+        rule=updateRule1.getText();
+        filterCondition1=updateFilterCondition1.getText().split("\n");
+        //2
+        fileSrc2=updateFileSrc2.getText();
+        fileOut2=updateFileOut.getText();
+        if (updateRadioButton1.isSelected()){ dirHibFlag=1;}
+        if (updateRadioButton2.isSelected()){ dirHibFlag=2;}
+        if (updateRadioButton3.isSelected()){ dirHibFlag=3;}
+
+        filterCondition2=updateFilterCondition2.getText().split("\n");
+    }
+
+    /**
+     * 功能四：文件更新提取
+     * @param e
+     */
+    private void updateButton1MouseClicked(MouseEvent e) {
+        // TODO add your code here
+        initUpdatePra();
+        ArrayList<File> failOpr = Update.renameFile(fileSrc1, rule,reDir, filterCondition1);
+        updateTextArea1.setText(getStringBuilder().toString());
+        updateFaileTextArea1.setText(getFaileBuilder(failOpr).toString());
+    }
+
+    private void updateButton2MouseClicked(MouseEvent e) {
+        // TODO add your code here
+        initUpdatePra();
+        ArrayList<File> failOpr =Update.removeFile(fileSrc2, fileOut2, dirHibFlag, filterCondition2);
+        updateTextArea2.setText(getStringBuilder().toString());
+        updateFailTextArea2.setText(getFaileBuilder(failOpr).toString());
     }
 
     /**
@@ -157,7 +203,10 @@ public class FileTool extends JFrame {
 
 
 
+
+
     private void initComponents() {
+
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         tabbedPane1 = new JTabbedPane();
         tabbedPane4 = new JTabbedPane();
@@ -216,26 +265,43 @@ public class FileTool extends JFrame {
         createTextArea2 = new JTextArea();
         scrollPane4 = new JScrollPane();
         createFaileTextArea2 = new JTextArea();
-        tabbedPane2 = new JTabbedPane();
+        tabbedPane = new JTabbedPane();
         panel6 = new JPanel();
-        panel4 = new JPanel();
+        updateFilterCondition1 = new JTextArea();
+        updateFileSrc1 = new JTextField();
+        label28 = new JLabel();
+        label29 = new JLabel();
+        label30 = new JLabel();
+        updateButton1 = new JButton();
+        label31 = new JLabel();
+        updateReDir1 = new JRadioButton();
+        scrollPane7 = new JScrollPane();
+        updateTextArea1 = new JTextArea();
+        label33 = new JLabel();
+        scrollPane8 = new JScrollPane();
+        updateFaileTextArea1 = new JTextArea();
         readFilterCondition4 = new JTextArea();
-        readFileSrc4 = new JTextField();
+        updateRule1 = new JTextField();
+        label32 = new JLabel();
+        panel4 = new JPanel();
+        updateFilterCondition2 = new JTextArea();
+        updateFileSrc2 = new JTextField();
         label13 = new JLabel();
         label14 = new JLabel();
-        readMutiDir4 = new JRadioButton();
         label15 = new JLabel();
-        readButton4 = new JButton();
+        updateButton2 = new JButton();
         label16 = new JLabel();
-        radioButton1 = new JRadioButton();
-        radioButton2 = new JRadioButton();
-        radioButton3 = new JRadioButton();
+        updateRadioButton1 = new JRadioButton();
+        updateRadioButton2 = new JRadioButton();
+        updateRadioButton3 = new JRadioButton();
         label25 = new JLabel();
         scrollPane5 = new JScrollPane();
-        textArea1 = new JTextArea();
+        updateTextArea2 = new JTextArea();
         scrollPane6 = new JScrollPane();
-        textArea2 = new JTextArea();
+        updateFailTextArea2 = new JTextArea();
         label26 = new JLabel();
+        label27 = new JLabel();
+        updateFileOut = new JTextField();
 
         //======== this ========
         Container contentPane = getContentPane();
@@ -714,33 +780,160 @@ public class FileTool extends JFrame {
             }
             tabbedPane1.addTab("Create", tabbedPane7);
 
-            //======== tabbedPane2 ========
+            //======== tabbedPane ========
             {
 
                 //======== panel6 ========
                 {
 
+                    //---- updateFilterCondition1 ----
+                    updateFilterCondition1.setText("\u8fc7\u6ee4\u6761\u4ef6\uff0c\u793a\u4f8b\u5982\u4e0b\uff1a\njava");
+
+                    //---- updateFileSrc1 ----
+                    updateFileSrc1.setText("D:\\helo");
+
+                    //---- label28 ----
+                    label28.setText("\u8fc7\u6ee4\u5173\u952e\u5b57");
+
+                    //---- label29 ----
+                    label29.setText("\u6587\u4ef6\u8bfb\u53d6\u8def\u5f84");
+
+                    //---- label30 ----
+                    label30.setText("\u4e3b\u8981\u6b65\u9aa4\uff1a\u53c2\u6570\u8bbe\u7f6e");
+
+                    //---- updateButton1 ----
+                    updateButton1.setText("\u5f00\u59cb\u91cd\u547d\u540d");
+                    updateButton1.addMouseListener(new MouseAdapter() {
+                        @Override
+                        public void mouseClicked(MouseEvent e) {
+                            updateButton1MouseClicked(e);
+                        }
+                    });
+
+                    //---- label31 ----
+                    label31.setText("\u6570\u636e\u8bfb\u53d6");
+
+                    //---- updateReDir1 ----
+                    updateReDir1.setText("\u91cd\u547d\u540d\u76ee\u5f55or\u6587\u4ef6");
+
+                    //======== scrollPane7 ========
+                    {
+                        scrollPane7.setViewportView(updateTextArea1);
+                    }
+
+                    //---- label33 ----
+                    label33.setText("\u63d0\u53d6\u5931\u8d25\u7684\u6587\u4ef6");
+
+                    //======== scrollPane8 ========
+                    {
+                        scrollPane8.setViewportView(updateFaileTextArea1);
+                    }
+
+                    //---- readFilterCondition4 ----
+                    readFilterCondition4.setText("\u521b\u5efa\u89c4\u5219\u8bf4\u660e\uff0c\u793a\u4f8b\u5982\u4e0b\uff1a \n\nHello^100$NUM^yyyy MM dd HH mm ss$Date^A$WORD\n\n\u53ef\u4ee5\u4f7f\u7528\u7684\u53c2\u6570\uff1a\n\n^100$ \u5fc5\u987b\u7684\uff0c\u8868\u4ece100\u5411\u4e0a\u8ba1\u6570\u521b\u5efa\n^yyyy MM dd HH mm ss$ \u65e5\u671f\uff0c\u8868\u793a \u5e74 \u6708 \u65e5 \u65f6 \u5206 \u79d2\n^A$ \u8868\u793a\u4ece\u5b57\u6bcd\u5f00\u59cb\u6392\u5e8f\uff0c\u53ef\u4ee5\u4f7f\u7528 A-Z a-z");
+                    readFilterCondition4.setEditable(false);
+
+                    //---- updateRule1 ----
+                    updateRule1.setText("Hello^100$NUM^yyyy MM dd HH mm ss$Date^A$WORD");
+
+                    //---- label32 ----
+                    label32.setText("\u4f60\u7684\u521b\u5efa\u89c4\u5219");
+
                     GroupLayout panel6Layout = new GroupLayout(panel6);
                     panel6.setLayout(panel6Layout);
                     panel6Layout.setHorizontalGroup(
                         panel6Layout.createParallelGroup()
-                            .addGap(0, 831, Short.MAX_VALUE)
+                            .addGroup(panel6Layout.createParallelGroup()
+                                .addGroup(panel6Layout.createSequentialGroup()
+                                    .addGap(0, 0, Short.MAX_VALUE)
+                                    .addGroup(panel6Layout.createParallelGroup()
+                                        .addGroup(panel6Layout.createSequentialGroup()
+                                            .addComponent(updateButton1, GroupLayout.PREFERRED_SIZE, 192, GroupLayout.PREFERRED_SIZE)
+                                            .addGap(6, 6, 6)
+                                            .addComponent(label31, GroupLayout.PREFERRED_SIZE, 403, GroupLayout.PREFERRED_SIZE)
+                                            .addGap(12, 12, 12)
+                                            .addComponent(label33, GroupLayout.PREFERRED_SIZE, 192, GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(label30, GroupLayout.PREFERRED_SIZE, 192, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(label29, GroupLayout.PREFERRED_SIZE, 122, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(updateFileSrc1, GroupLayout.PREFERRED_SIZE, 192, GroupLayout.PREFERRED_SIZE))
+                                    .addGap(0, 26, Short.MAX_VALUE)))
+                            .addGroup(panel6Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(panel6Layout.createParallelGroup()
+                                    .addGroup(panel6Layout.createSequentialGroup()
+                                        .addGroup(panel6Layout.createParallelGroup()
+                                            .addComponent(updateReDir1)
+                                            .addComponent(label28, GroupLayout.PREFERRED_SIZE, 192, GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(updateFilterCondition1, GroupLayout.PREFERRED_SIZE, 190, GroupLayout.PREFERRED_SIZE))
+                                        .addGap(19, 19, 19))
+                                    .addGroup(GroupLayout.Alignment.TRAILING, panel6Layout.createSequentialGroup()
+                                        .addGroup(panel6Layout.createParallelGroup()
+                                            .addComponent(readFilterCondition4, GroupLayout.PREFERRED_SIZE, 199, GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(panel6Layout.createSequentialGroup()
+                                                .addGap(5, 5, 5)
+                                                .addGroup(panel6Layout.createParallelGroup()
+                                                    .addComponent(label32, GroupLayout.PREFERRED_SIZE, 192, GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(updateRule1, GroupLayout.PREFERRED_SIZE, 203, GroupLayout.PREFERRED_SIZE))))
+                                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)))
+                                .addComponent(scrollPane7, GroupLayout.PREFERRED_SIZE, 395, GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(scrollPane8, GroupLayout.PREFERRED_SIZE, 180, GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(24, Short.MAX_VALUE))
                     );
                     panel6Layout.setVerticalGroup(
                         panel6Layout.createParallelGroup()
-                            .addGap(0, 494, Short.MAX_VALUE)
+                            .addGroup(panel6Layout.createParallelGroup()
+                                .addGroup(panel6Layout.createSequentialGroup()
+                                    .addGap(0, 0, Short.MAX_VALUE)
+                                    .addGroup(panel6Layout.createParallelGroup()
+                                        .addComponent(updateButton1)
+                                        .addComponent(label31, GroupLayout.PREFERRED_SIZE, 24, GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(panel6Layout.createSequentialGroup()
+                                            .addGap(6, 6, 6)
+                                            .addComponent(label33)))
+                                    .addGap(6, 6, 6)
+                                    .addGroup(panel6Layout.createParallelGroup()
+                                        .addComponent(label30, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(panel6Layout.createSequentialGroup()
+                                            .addGap(13, 13, 13)
+                                            .addComponent(label29, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)))
+                                    .addGap(6, 6, 6)
+                                    .addComponent(updateFileSrc1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                    .addGap(0, 379, Short.MAX_VALUE)))
+                            .addGroup(panel6Layout.createSequentialGroup()
+                                .addGroup(panel6Layout.createParallelGroup()
+                                    .addGroup(panel6Layout.createSequentialGroup()
+                                        .addGap(121, 121, 121)
+                                        .addComponent(updateReDir1)
+                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(label28, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(updateFilterCondition1, GroupLayout.PREFERRED_SIZE, 66, GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(label32, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
+                                        .addGap(6, 6, 6)
+                                        .addComponent(updateRule1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                        .addGap(15, 15, 15)
+                                        .addComponent(readFilterCondition4, GroupLayout.PREFERRED_SIZE, 182, GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addGroup(panel6Layout.createSequentialGroup()
+                                        .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(panel6Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(scrollPane7, GroupLayout.DEFAULT_SIZE, 457, Short.MAX_VALUE)
+                                            .addComponent(scrollPane8, GroupLayout.DEFAULT_SIZE, 457, Short.MAX_VALUE))))
+                                .addContainerGap())
                     );
                 }
-                tabbedPane2.addTab("\u6279\u91cf\u91cd\u547d\u540d\u76ee\u6807\u6587\u4ef6", panel6);
+                tabbedPane.addTab("\u6279\u91cf\u91cd\u547d\u540d\u76ee\u6807\u6587\u4ef6", panel6);
 
                 //======== panel4 ========
                 {
 
-                    //---- readFilterCondition4 ----
-                    readFilterCondition4.setText("\u8fc7\u6ee4\u6761\u4ef6\uff0c\u793a\u4f8b\u5982\u4e0b\uff1a\njava");
+                    //---- updateFilterCondition2 ----
+                    updateFilterCondition2.setText("\u8fc7\u6ee4\u6761\u4ef6\uff0c\u793a\u4f8b\u5982\u4e0b\uff1a\njava");
 
-                    //---- readFileSrc4 ----
-                    readFileSrc4.setText("D:\\helo");
+                    //---- updateFileSrc2 ----
+                    updateFileSrc2.setText("D:\\helo");
 
                     //---- label13 ----
                     label13.setText("\u8fc7\u6ee4\u5173\u952e\u5b57");
@@ -748,49 +941,52 @@ public class FileTool extends JFrame {
                     //---- label14 ----
                     label14.setText("\u6587\u4ef6\u8bfb\u53d6\u8def\u5f84");
 
-                    //---- readMutiDir4 ----
-                    readMutiDir4.setText("\u662f\u5426\u6df1\u5ea6\u8bfb\u53d6");
-                    readMutiDir4.setSelected(true);
-
                     //---- label15 ----
                     label15.setText("\u4e3b\u8981\u6b65\u9aa4\uff1a\u53c2\u6570\u8bbe\u7f6e");
 
-                    //---- readButton4 ----
-                    readButton4.setText("\u5f00\u59cb\u63d0\u53d6");
-                    readButton4.addMouseListener(new MouseAdapter() {
+                    //---- updateButton2 ----
+                    updateButton2.setText("\u5f00\u59cb\u63d0\u53d6");
+                    updateButton2.addMouseListener(new MouseAdapter() {
                         @Override
                         public void mouseClicked(MouseEvent e) {
-                            readButtonMouseClicked(e);
+                            updateButton2MouseClicked(e);
                         }
                     });
 
                     //---- label16 ----
                     label16.setText("\u6570\u636e\u8bfb\u53d6");
 
-                    //---- radioButton1 ----
-                    radioButton1.setText("\u4e0d\u521b\u5efa\u65b0\u76ee\u5f55");
+                    //---- updateRadioButton1 ----
+                    updateRadioButton1.setText("\u4e0d\u521b\u5efa\u65b0\u76ee\u5f55");
+                    updateRadioButton1.setSelected(true);
 
-                    //---- radioButton2 ----
-                    radioButton2.setText("\u521b\u5efa\u4e00\u7ea7\u76ee\u5f55");
+                    //---- updateRadioButton2 ----
+                    updateRadioButton2.setText("\u521b\u5efa\u4e00\u7ea7\u76ee\u5f55");
 
-                    //---- radioButton3 ----
-                    radioButton3.setText("\u4fdd\u6301\u539f\u6765\u7684\u76ee\u5f55\u6811");
+                    //---- updateRadioButton3 ----
+                    updateRadioButton3.setText("\u4fdd\u6301\u539f\u6765\u7684\u76ee\u5f55\u6811");
 
                     //---- label25 ----
                     label25.setText("\u9009\u62e9\u76ee\u5f55\u7ed3\u6784");
 
                     //======== scrollPane5 ========
                     {
-                        scrollPane5.setViewportView(textArea1);
+                        scrollPane5.setViewportView(updateTextArea2);
                     }
 
                     //======== scrollPane6 ========
                     {
-                        scrollPane6.setViewportView(textArea2);
+                        scrollPane6.setViewportView(updateFailTextArea2);
                     }
 
                     //---- label26 ----
                     label26.setText("\u63d0\u53d6\u5931\u8d25\u7684\u6587\u4ef6");
+
+                    //---- label27 ----
+                    label27.setText("\u6587\u4ef6\u8f93\u51fa\u8def\u5f84");
+
+                    //---- updateFileOut ----
+                    updateFileOut.setText("D:\\helo");
 
                     GroupLayout panel4Layout = new GroupLayout(panel4);
                     panel4.setLayout(panel4Layout);
@@ -801,27 +997,29 @@ public class FileTool extends JFrame {
                                     .addGap(0, 0, Short.MAX_VALUE)
                                     .addGroup(panel4Layout.createParallelGroup()
                                         .addGroup(panel4Layout.createSequentialGroup()
-                                            .addComponent(readButton4, GroupLayout.PREFERRED_SIZE, 192, GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(updateButton2, GroupLayout.PREFERRED_SIZE, 192, GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                             .addComponent(label16, GroupLayout.PREFERRED_SIZE, 403, GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(label15, GroupLayout.PREFERRED_SIZE, 192, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(readMutiDir4, GroupLayout.PREFERRED_SIZE, 192, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(label14, GroupLayout.PREFERRED_SIZE, 122, GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(label15, GroupLayout.PREFERRED_SIZE, 192, GroupLayout.PREFERRED_SIZE))
                                     .addGap(0, 230, Short.MAX_VALUE)))
                             .addGroup(GroupLayout.Alignment.TRAILING, panel4Layout.createSequentialGroup()
                                 .addGroup(panel4Layout.createParallelGroup()
-                                    .addComponent(readFileSrc4, GroupLayout.PREFERRED_SIZE, 192, GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(label14, GroupLayout.PREFERRED_SIZE, 122, GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(updateFileSrc2, GroupLayout.PREFERRED_SIZE, 192, GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(label27, GroupLayout.PREFERRED_SIZE, 122, GroupLayout.PREFERRED_SIZE)
                                     .addGroup(panel4Layout.createSequentialGroup()
                                         .addContainerGap()
                                         .addGroup(panel4Layout.createParallelGroup()
+                                            .addGroup(panel4Layout.createParallelGroup()
+                                                .addComponent(updateFilterCondition2, GroupLayout.PREFERRED_SIZE, 190, GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(label13, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 192, GroupLayout.PREFERRED_SIZE))
                                             .addComponent(label25)
-                                            .addComponent(radioButton1)
-                                            .addComponent(radioButton2)
-                                            .addComponent(radioButton3)
-                                            .addComponent(label13, GroupLayout.PREFERRED_SIZE, 192, GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(readFilterCondition4, GroupLayout.PREFERRED_SIZE, 190, GroupLayout.PREFERRED_SIZE))))
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(scrollPane5, GroupLayout.DEFAULT_SIZE, 397, Short.MAX_VALUE)
+                                            .addComponent(updateRadioButton1)
+                                            .addComponent(updateRadioButton2)
+                                            .addComponent(updateRadioButton3)
+                                            .addComponent(updateFileOut, GroupLayout.PREFERRED_SIZE, 192, GroupLayout.PREFERRED_SIZE))))
+                                .addGap(8, 8, 8)
+                                .addComponent(scrollPane5, GroupLayout.DEFAULT_SIZE, 395, Short.MAX_VALUE)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(panel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
                                     .addComponent(label26, GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
@@ -834,60 +1032,68 @@ public class FileTool extends JFrame {
                                 .addGroup(panel4Layout.createSequentialGroup()
                                     .addGap(0, 0, Short.MAX_VALUE)
                                     .addGroup(panel4Layout.createParallelGroup()
-                                        .addComponent(readButton4)
+                                        .addComponent(updateButton2)
                                         .addComponent(label16, GroupLayout.PREFERRED_SIZE, 24, GroupLayout.PREFERRED_SIZE))
                                     .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(label15, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
-                                    .addGap(6, 6, 6)
-                                    .addComponent(readMutiDir4)
-                                    .addGap(6, 6, 6)
-                                    .addComponent(label14, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
-                                    .addGap(0, 372, Short.MAX_VALUE)))
+                                    .addGap(0, 433, Short.MAX_VALUE)))
                             .addGroup(GroupLayout.Alignment.TRAILING, panel4Layout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(label26)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                                 .addGroup(panel4Layout.createParallelGroup()
                                     .addComponent(scrollPane6, GroupLayout.PREFERRED_SIZE, 457, GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(panel4Layout.createParallelGroup()
-                                        .addGroup(GroupLayout.Alignment.TRAILING, panel4Layout.createSequentialGroup()
-                                            .addComponent(readFileSrc4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(panel4Layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                                        .addGroup(panel4Layout.createSequentialGroup()
+                                            .addComponent(label14, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(updateFileSrc2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(label27, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(updateFileOut, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                             .addComponent(label25)
                                             .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(radioButton1)
+                                            .addComponent(updateRadioButton1)
                                             .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(radioButton2)
+                                            .addComponent(updateRadioButton2)
                                             .addGap(2, 2, 2)
-                                            .addComponent(radioButton3)
+                                            .addComponent(updateRadioButton3)
                                             .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                             .addComponent(label13, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(readFilterCondition4, GroupLayout.PREFERRED_SIZE, 218, GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(scrollPane5, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 457, GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(updateFilterCondition2, GroupLayout.PREFERRED_SIZE, 173, GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(scrollPane5, GroupLayout.PREFERRED_SIZE, 457, GroupLayout.PREFERRED_SIZE)))
                                 .addContainerGap())
                     );
                 }
-                tabbedPane2.addTab("\u63d0\u53d6\u6587\u4ef6", panel4);
+                tabbedPane.addTab("\u63d0\u53d6\u6587\u4ef6", panel4);
             }
-            tabbedPane1.addTab("Update", tabbedPane2);
+            tabbedPane1.addTab("Update", tabbedPane);
         }
 
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
         contentPaneLayout.setHorizontalGroup(
             contentPaneLayout.createParallelGroup()
-                .addComponent(tabbedPane1)
+                .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(tabbedPane1)
+                    .addContainerGap())
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
-                .addComponent(tabbedPane1, GroupLayout.Alignment.TRAILING)
+                .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(tabbedPane1, GroupLayout.DEFAULT_SIZE, 558, Short.MAX_VALUE)
+                    .addContainerGap())
         );
         pack();
         setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
-
+    ButtonGroup buttonGroup;
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     private JTabbedPane tabbedPane1;
     private JTabbedPane tabbedPane4;
@@ -946,25 +1152,42 @@ public class FileTool extends JFrame {
     private JTextArea createTextArea2;
     private JScrollPane scrollPane4;
     private JTextArea createFaileTextArea2;
-    private JTabbedPane tabbedPane2;
+    private JTabbedPane tabbedPane;
     private JPanel panel6;
-    private JPanel panel4;
+    private JTextArea updateFilterCondition1;
+    private JTextField updateFileSrc1;
+    private JLabel label28;
+    private JLabel label29;
+    private JLabel label30;
+    private JButton updateButton1;
+    private JLabel label31;
+    private JRadioButton updateReDir1;
+    private JScrollPane scrollPane7;
+    private JTextArea updateTextArea1;
+    private JLabel label33;
+    private JScrollPane scrollPane8;
+    private JTextArea updateFaileTextArea1;
     private JTextArea readFilterCondition4;
-    private JTextField readFileSrc4;
+    private JTextField updateRule1;
+    private JLabel label32;
+    private JPanel panel4;
+    private JTextArea updateFilterCondition2;
+    private JTextField updateFileSrc2;
     private JLabel label13;
     private JLabel label14;
-    private JRadioButton readMutiDir4;
     private JLabel label15;
-    private JButton readButton4;
+    private JButton updateButton2;
     private JLabel label16;
-    private JRadioButton radioButton1;
-    private JRadioButton radioButton2;
-    private JRadioButton radioButton3;
+    private JRadioButton updateRadioButton1;
+    private JRadioButton updateRadioButton2;
+    private JRadioButton updateRadioButton3;
     private JLabel label25;
     private JScrollPane scrollPane5;
-    private JTextArea textArea1;
+    private JTextArea updateTextArea2;
     private JScrollPane scrollPane6;
-    private JTextArea textArea2;
+    private JTextArea updateFailTextArea2;
     private JLabel label26;
+    private JLabel label27;
+    private JTextField updateFileOut;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

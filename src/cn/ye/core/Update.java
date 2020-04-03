@@ -5,13 +5,33 @@ import cn.ye.model.fileModle;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 import static cn.ye.core.Create.*;
 
 
 public class Update {
     private static ArrayList<File> failCre;
-
+    /**
+     * 文件过滤器
+     *
+     * @param firstDir
+     * @param compile
+     * @return
+     */
+    private static File[] getFiles(File firstDir, Pattern compile) {
+        return firstDir.listFiles(file ->
+                {
+                    if (file.isDirectory()) {
+                        return true;
+                    }
+                    if (compile.matcher(file.getName()).find()) {
+                        return true;
+                    }
+                    return false;
+                }
+        );
+    }
     /**
      * 根据规则对目录进行重命名，可以选择针对目录或者文件的重命名。
      * 注意：这里会对一些系统不支持的命名字符进行替换
@@ -25,6 +45,28 @@ public class Update {
     public static ArrayList<File> renameFile(String fileSrc, String rule, boolean reDir, String... filterCondition) {
         //根据规则进行文件读取
         ArrayList<fileModle> fileModles = Read.getFileModles(fileSrc, false, filterCondition);
+
+        StringBuilder builderFirst = new StringBuilder();
+        //进行正则过滤条件的拼接
+        for (int i = 0; i < filterCondition.length; i++) {
+            if (i == filterCondition.length - 1) {
+                builderFirst.append(filterCondition[i]);
+            } else {
+                builderFirst.append(filterCondition[i]).append("|");
+            }
+        }
+        //正则表达式的编译
+        Pattern compile = Pattern.compile(builderFirst.toString(), Pattern.CANON_EQ);
+        for (int i = 0; i < fileModles.size(); i++) {
+            fileModle fileModle = fileModles.get(i);
+            if (fileModle.isIs_dir()) {
+                if (!compile.matcher(fileModle.getFileNameOrDirName()).find()) {
+                    fileModles.remove(i);
+                    i--;
+                }
+            }
+        }
+
         //初始条件筛选
         if (fileModles.size() < 1 || rule == null || rule.equals("")) {
             return null;

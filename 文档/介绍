@@ -39,16 +39,18 @@ Create
 Update
 
 * @param fileSrc         设置遍历目录的源头
+* @param reDir           判断是重命名目录或者文件
+* @param rule            用户输入的过滤条件判断
+* @param filterCondition 设置文件过滤条件
+* @return 返回重名名失败的文件
+
+* @param fileSrc         设置遍历目录的源头
 * @param fileOut         文件移动目的地
 * @param dirHibFlag      设置需要几级目录，1 表示不创建额外目录，2 表示创建一级目录，3 表示保持原来的目录树结构
 * @param filterCondition 过滤条件
 * @return 返回复制失败的文件
 
-* @param fileSrc         设置遍历目录的源头
-* @param rule            用户输入的过滤条件判断
-* @param reDir           判断是重命名目录或者文件
-* @param filterCondition 设置文件过滤条件
-* @return 返回重名名失败的文件
+
 
 
 
