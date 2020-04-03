@@ -29,9 +29,6 @@ public class CRUD {
     @Test
     public void read() {
         ArrayList<fileModle> fileModles = Read.getFileModles(fileSrc, true, filterCondition);
-        for (fileModle fileModle : fileModles) {
-            System.out.println(fileModle);
-        }
     }
 
     @Test

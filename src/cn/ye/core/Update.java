@@ -13,8 +13,9 @@ public class Update {
     private static ArrayList<File> failCre;
 
     /**
-     *根据规则对目录进行重命名，可以选择针对目录或者文件的重命名。
+     * 根据规则对目录进行重命名，可以选择针对目录或者文件的重命名。
      * 注意：这里会对一些系统不支持的命名字符进行替换
+     *
      * @param fileSrc         设置遍历目录的源头
      * @param rule            用户输入的过滤条件判断
      * @param reDir           判断是重命名目录或者文件
@@ -52,18 +53,14 @@ public class Update {
             if (reDir) {
                 //如果是目录则进行重命名
                 if (fileMsg.isDirectory()) {
-                    try {
-                        fileMsg.renameTo(new File(fileMsg.getParentFile(), builder.toString()));
-                    } catch (Exception e) {
+                    if (!fileMsg.renameTo(new File(fileMsg.getParentFile(), builder.toString()))) {
                         failCre.add(fileMsg);
                     }
                 }
             } else {
                 //如果是文件则进行重名名
                 if (fileMsg.isFile()) {
-                    try {
-                        fileMsg.renameTo(new File(fileMsg.getParentFile(), builder.toString()));
-                    } catch (Exception e) {
+                    if (!fileMsg.renameTo(new File(fileMsg.getParentFile(), builder.toString()))) {
                         failCre.add(fileMsg);
                     }
                 }
@@ -75,6 +72,7 @@ public class Update {
 
     /**
      * 进行文件的复制移动，可已根据标志位进行复制一级或者多级目录
+     *
      * @param fileSrc         设置遍历目录的源头
      * @param fileOut         文件移动目的地
      * @param dirHibFlag      设置需要几级目录，1 表示不创建额外目录，2 表示创建一级目录，3 表示保持原来的目录树结构
@@ -149,7 +147,8 @@ public class Update {
 
     /**
      * 进行字节流复制
-     * @param fileMsg 需要复制的文件目录
+     *
+     * @param fileMsg  需要复制的文件目录
      * @param newFPath 复制目标路径
      */
     private static void copyStream(File fileMsg, String newFPath) {

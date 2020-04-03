@@ -1,0 +1,349 @@
+JFDML JFormDesigner: "6.0.2.0.116" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp tabbedPane1::l:::x}"
+			"$verticalGroup": "par l {comp tabbedPane1::t:::x}"
+		} ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+				name: "tabbedPane1"
+				add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+					name: "tabbedPane4"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq t {space :::p, par l {seq t {comp label3::::141:x, space :p:76:p}, seq {par l:::p {comp readButton::::192:x, comp label2::l:::x, comp readMutiDir::l::192:x, comp readFileSrc::l::192:x, comp label4::l::192:x, comp scrollPane2::l::192:x}, space :::x}}, par l {comp label1:::::x, comp scrollPane1:::p:602:p}, space :::p}}"
+						"$verticalGroup": "par l {seq t {space :::p, par l:::p {comp readButton:::p::p, seq {comp label1:::::x, space :6:6:p}}, par l {seq {comp label2:::p:25:p, space :::p, comp readMutiDir:::p::p, space :::p, comp label3:::p:30:p, space :::p, comp readFileSrc:::p:30:p, space :::p, comp label4::::34:x, space :::p, comp scrollPane2:::p:284:p, space :::p}, comp scrollPane1::::458:x}}}"
+					} ) {
+						name: "panel1"
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "scrollPane1"
+							add( new FormComponent( "javax.swing.JTextArea" ) {
+								name: "readtextArea1"
+							} )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "readButton"
+							"text": "读取文件"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "readButtonMouseClicked", true ) )
+							addEvent( new FormEvent( "java.awt.event.FocusListener", "focusLost", "readButtonFocusLost", true ) )
+						} )
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "scrollPane2"
+							add( new FormComponent( "javax.swing.JTextArea" ) {
+								name: "readFilterCondition"
+								"text": "过滤条件，示例如下：\njava"
+							} )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label1"
+							"text": "数据读取"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label2"
+							"text": "主要步骤：参数设置"
+						} )
+						add( new FormComponent( "javax.swing.JRadioButton" ) {
+							name: "readMutiDir"
+							"text": "是否深度读取"
+							"selected": true
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "readFileSrc"
+							"text": "D:\\helo"
+							addEvent( new FormEvent( "java.awt.event.FocusListener", "focusLost", "readFileSrcFocusLost", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label3"
+							"text": "文件读取路径"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label4"
+							"text": "过滤关键字"
+						} )
+					}, new FormLayoutConstraints( null ) {
+						"title": "文件条件读取"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Read"
+				} )
+				add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+					name: "tabbedPane5"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq t {space ::627:x, par l {comp label17:::p:197:p, comp deleteFaileTextField1::::0:x}, space :::p}};par l {seq {space :0:0:p, par l {comp deleteButton2::l:p:192:p, comp label7:::p:192:p, comp deleteMutiDir2:::p:192:p, comp label6:::p:122:p, comp deleteFileSrc2:::p:192:p, comp label5:::p:192:p, seq {space :1:1:p, comp deleteFilterCondition2:::p:190:p}}, space :::p, par l {comp deleteTextArea2::::416:x, comp label8::::416:x}, space :p:217:p}}"
+						"$verticalGroup": "par l {seq l {comp label17:::p:25:p, space u:::p, comp deleteFaileTextField1::::451:x, space :::p}};par l {seq {space :0:0:x, par l {comp deleteButton2:::p::p, comp label8:::p:24:p}, space :::p, par l {seq {comp label7:::p:25:p, space :6:6:p, comp deleteMutiDir2:::p::p, space :6:6:p, comp label6:::p:30:p, space :6:6:p, comp deleteFileSrc2:::p::p, space :6:6:p, comp label5:::p:22:p, space :7:7:p, comp deleteFilterCondition2:::p:282:p}, seq {space :1:1:p, comp deleteTextArea2:::p:444:p}}, space ::12:x}}"
+					} ) {
+						name: "panel2"
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "deleteTextArea2"
+						} )
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "deleteFilterCondition2"
+							"text": "过滤条件，示例如下：\njava"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "deleteFileSrc2"
+							"text": "D:\\helo"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label5"
+							"text": "删除文件筛选关键字"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label6"
+							"text": "文件删除目标路径"
+						} )
+						add( new FormComponent( "javax.swing.JRadioButton" ) {
+							name: "deleteMutiDir2"
+							"text": "是否删除目录"
+							"selected": true
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label7"
+							"text": "主要步骤：参数设置"
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "deleteButton2"
+							"text": "进行删除"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "deleteButtonMouseClicked", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label8"
+							"text": "数据读取"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label17"
+							"text": "删除失败的文件"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "deleteFaileTextField1"
+						} )
+					}, new FormLayoutConstraints( null ) {
+						"title": "文件条件删除"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Delete"
+				} )
+				add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+					name: "tabbedPane7"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq l {space :::p, par l {seq {space :0:0:x, comp createRule:::p:203:p}, seq {par l {comp label9::l:p:192:p, comp label12:::p::p, comp createDirNum:::p:131:p}, space :0:0:x}}, space s:::p, par l {seq l {comp label23:::p:332:p, space :90:90:p, comp label24:::p:176:p}, seq l {space :1:1:p, comp createTextArea1:::p:414:p, space :8:8:p, comp createFaileTextArea1:::p:174:p}}, space :::p}};par l {seq {space :0:0:x, par l {comp createButton1:::p:192:p, comp label11:::p:192:p, comp createIsMKDir1:::p:192:p, comp label10:::p:122:p, comp createFileOut1:::p:192:p}, space :0:638:x}, seq l {space :p:1:p, comp readFilterCondition3:::p:199:p, space ::631:x}}"
+						"$verticalGroup": "par l {seq {space :::p, par l {seq l {space :1:1:p, comp label23:::p:24:p}, comp label24:::p:27:p}, par l {seq {space :7:7:p, par l {comp createTextArea1:::p:447:p, comp createFaileTextArea1:::p:447:p}}, seq l {space :p:121:p, comp label12:::p::p, space :8:8:p, comp createDirNum:::p::p, space :::p, comp label9:::p:22:p, space :::p, comp createRule:::p::p}}, space ::7:x}};par l {seq {space :0:0:x, comp createButton1:::p::p, space :0:0:p, comp label11:::p:25:p, space :6:6:p, comp createIsMKDir1:::p::p, space :6:6:p, comp label10:::p:30:p, space :6:6:p, comp createFileOut1:::p::p, space :p:135:p, comp readFilterCondition3:::p:182:p, space :0:24:x}}"
+					} ) {
+						name: "panel3"
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "readFilterCondition3"
+							"text": "创建规则说明，示例如下： \n\nHello^100$NUM^yyyy MM dd HH mm ss$Date^A$WORD\n\n可以使用的参数：\n\n^100$ 必须的，表从100向上计数创建\n^yyyy MM dd HH mm ss$ 日期，表示 年 月 日 时 分 秒\n^A$ 表示从字母开始排序，可以使用 A-Z a-z"
+							"editable": false
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "createFileOut1"
+							"text": "D:\\helo"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label9"
+							"text": "你的创建规则"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label10"
+							"text": "文件创建输出路径"
+						} )
+						add( new FormComponent( "javax.swing.JRadioButton" ) {
+							name: "createIsMKDir1"
+							"text": "创建目录or文件"
+							"selected": true
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label11"
+							"text": "主要步骤：参数设置"
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "createButton1"
+							"text": "开始创建"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "createButton1MouseClicked", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "createRule"
+							"text": "Hello^100$NUM^yyyy MM dd HH mm ss$Date^A$WORD"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label23"
+							"text": "数据读取"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label24"
+							"text": "创建失败的文件"
+						} )
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "createFaileTextArea1"
+						} )
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "createTextArea1"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label12"
+							"text": "创建文件的数量"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "createDirNum"
+							"text": "10"
+						} )
+					}, new FormLayoutConstraints( null ) {
+						"title": "根据特殊的规则创建文件"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq l {comp label18:::p:192:p, space :p:24:p, comp scrollPane3::::427:x, space :::p, par l:::p {comp label22::::176:x, comp scrollPane4::::176:x}, space :::p}};par l {seq {space :0:0:x, par l {seq {comp createButton2:::p:192:p, space :::p, comp label21:::p:332:p}, comp label20:::p:192:p, comp createIsMKDir2:::p:192:p, comp label19:::p:122:p, comp createFileOut2:::p:192:p}, space :0:300:x}, seq l {space :p:2:p, comp createStrings2:::p:190:p, space ::639:x}}"
+						"$verticalGroup": "par l {seq {space :::p, comp label22:::p:27:p, space :::p, par l {comp scrollPane4:::p:449:p, comp scrollPane3::::0:x}, space :::x}, seq l {space :p:226:p, comp label18:::p:22:p, space :::x}};par l {seq {space :0:0:x, par l {comp createButton2:::p::p, comp label21:::p:24:p}, space :::p, comp label20:::p:25:p, space :6:6:p, comp createIsMKDir2:::p::p, space :6:6:p, comp label19:::p:30:p, space :6:6:p, comp createFileOut2:::p::p, space :p:90:p, comp createStrings2:::p:227:p, space :0:18:x}}"
+					} ) {
+						name: "panel5"
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "createStrings2"
+							"text": "示例：\njava1 \njava2 \njava3 \njava4"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "createFileOut2"
+							"text": "D:\\helo"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label18"
+							"text": "创建名称，以回车分隔"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label19"
+							"text": "文件创建目标"
+						} )
+						add( new FormComponent( "javax.swing.JRadioButton" ) {
+							name: "createIsMKDir2"
+							"text": "创建目录or文件"
+							"selected": true
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label20"
+							"text": "主要步骤：参数设置"
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "createButton2"
+							"text": "开始创建"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "createButton2MouseClicked", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label21"
+							"text": "数据读取"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label22"
+							"text": "创建失败的文件"
+						} )
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "scrollPane3"
+							add( new FormComponent( "javax.swing.JTextArea" ) {
+								name: "createTextArea2"
+							} )
+						} )
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "scrollPane4"
+							add( new FormComponent( "javax.swing.JTextArea" ) {
+								name: "createFaileTextArea2"
+							} )
+						} )
+					}, new FormLayoutConstraints( null ) {
+						"title": "根据固定名称创建文件"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Create"
+				} )
+				add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+					name: "tabbedPane2"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {space :0:831:x}"
+						"$verticalGroup": "par l {space :0:494:x}"
+					} ) {
+						name: "panel6"
+					}, new FormLayoutConstraints( null ) {
+						"title": "批量重命名目标文件"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq t {par l {comp readFileSrc4::l:p:192:p, seq l {space :::p, par l {comp label25::l:p::p, comp radioButton1::l:p::p, comp radioButton2::l:p::p, comp radioButton3::l:p::p, comp label13::l:p:192:p, comp readFilterCondition4::l:p:190:p}}}, space :::p, comp scrollPane5::::397:x, space u:::p, par l:::p {comp label26::::192:x, comp scrollPane6::::192:x}, space :p:26:p}};par l {seq {space :0:0:x, par l {seq {comp readButton4:::p:192:p, space :::p, comp label16:::p:403:p}, comp label15:::p:192:p, comp readMutiDir4:::p:192:p, comp label14:::p:122:p}, space :0:230:x}}"
+						"$verticalGroup": "par l {seq t {space :::p, comp label26:::p::p, space ::8:x, par l {comp scrollPane6::l:p:457:p, par l {seq t {comp readFileSrc4:::p::p, space :::p, comp label25:::p::p, space :::p, comp radioButton1:::p::p, space :::p, comp radioButton2:::p::p, space :p:2:p, comp radioButton3:::p::p, space :::p, comp label13:::p:22:p, space :::p, comp readFilterCondition4:::p:218:p}, comp scrollPane5::t:p:457:p}}, space :::p}};par l {seq {space :0:0:x, par l {comp readButton4:::p::p, comp label16:::p:24:p}, space :::p, comp label15:::p:25:p, space :6:6:p, comp readMutiDir4:::p::p, space :6:6:p, comp label14:::p:30:p, space :0:372:x}}"
+					} ) {
+						name: "panel4"
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "readFilterCondition4"
+							"text": "过滤条件，示例如下：\njava"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "readFileSrc4"
+							"text": "D:\\helo"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label13"
+							"text": "过滤关键字"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label14"
+							"text": "文件读取路径"
+						} )
+						add( new FormComponent( "javax.swing.JRadioButton" ) {
+							name: "readMutiDir4"
+							"text": "是否深度读取"
+							"selected": true
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label15"
+							"text": "主要步骤：参数设置"
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "readButton4"
+							"text": "开始提取"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "readButtonMouseClicked", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label16"
+							"text": "数据读取"
+						} )
+						add( new FormComponent( "javax.swing.JRadioButton" ) {
+							name: "radioButton1"
+							"text": "不创建新目录"
+						} )
+						add( new FormComponent( "javax.swing.JRadioButton" ) {
+							name: "radioButton2"
+							"text": "创建一级目录"
+						} )
+						add( new FormComponent( "javax.swing.JRadioButton" ) {
+							name: "radioButton3"
+							"text": "保持原来的目录树"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label25"
+							"text": "选择目录结构"
+						} )
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "scrollPane5"
+							add( new FormComponent( "javax.swing.JTextArea" ) {
+								name: "textArea1"
+							} )
+						} )
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "scrollPane6"
+							add( new FormComponent( "javax.swing.JTextArea" ) {
+								name: "textArea2"
+							} )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label26"
+							"text": "提取失败的文件"
+						} )
+					}, new FormLayoutConstraints( null ) {
+						"title": "提取文件"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Update"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 810, 590 )
+		} )
+	}
+}

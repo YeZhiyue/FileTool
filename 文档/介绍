@@ -1,0 +1,61 @@
+# 目录
+
+- 功能介绍，基本使用
+- 模块介绍
+- 方法介绍
+
+
+## 功能介绍，基本使用
+
+
+
+## 模块介绍
+
+
+
+## 方法介绍
+
+Reader
+* @param fileSrc         读入文件源
+* @param mutiDir         是否多层目录遍历
+* @param filterCondition 过滤条件
+* @return 文件数据集合
+
+
+Create
+
+* @param fileOut 文件输出位置
+* @param rule 用户定义命名文件规则
+* @param isMkDir 选择创建目录或者文件
+* @param dirNum 创建的数量
+* @return 返回创建失败的文件或目录
+
+* @param fileOut 文件创建目的地
+* @param strings 输入的规则字符串，要求以换行符\n分隔
+* @param isMkDir 选择创建目录或者文件
+* @return 返回创建失败的文件或目录
+
+
+Update
+
+* @param fileSrc         设置遍历目录的源头
+* @param fileOut         文件移动目的地
+* @param dirHibFlag      设置需要几级目录，1 表示不创建额外目录，2 表示创建一级目录，3 表示保持原来的目录树结构
+* @param filterCondition 过滤条件
+* @return 返回复制失败的文件
+
+* @param fileSrc         设置遍历目录的源头
+* @param rule            用户输入的过滤条件判断
+* @param reDir           判断是重命名目录或者文件
+* @param filterCondition 设置文件过滤条件
+* @return 返回重名名失败的文件
+
+
+
+
+Delete
+
+* @param fileSrc         设置遍历目录的源头
+* @param delDir          是否删除目录
+* @param filterCondition 过滤条件
+* @return 返回复制失败的文件

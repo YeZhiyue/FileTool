@@ -34,7 +34,7 @@ public class Read {
         if (fileSrc == null || fileSrc == "" || !file.exists() || file.list() == null) {
             return null;
         }
-        //创建fileModles准备存放文件数据
+        //创建fileModles准备存放文件数据,并且刷新使得原有数据失效
         fileModles = new ArrayList<>();
         //进行正则表达式编译
         StringBuilder builder = new StringBuilder();

@@ -17,10 +17,10 @@ public class Create {
     /**
      * 根据固定的字符串进行文件或者目录的创建
      *
-     * @param fileOut
-     * @param strings
-     * @param isMkDir
-     * @return
+     * @param fileOut 文件创建目的地
+     * @param strings 输入的规则字符串，要求以换行符\n分隔
+     * @param isMkDir 选择创建目录或者文件
+     * @return 返回创建失败的文件或目录
      */
     public static ArrayList<File> createDirOrFileByStrings(String fileOut, String[] strings, boolean isMkDir) {
         if (strings == null || strings[0].equals("")) {
@@ -30,10 +30,14 @@ public class Create {
         for (String filePath : strings) {
             File file = new File(fileOut + "\\\\" + filePath);
             if (isMkDir) {
-                file.mkdirs();
+                if (!file.mkdirs()) {
+                    failCre.add(file);
+                }
             } else {
                 try {
-                    file.createNewFile();
+                    if (!file.createNewFile()) {
+                        failCre.add(file);
+                    }
                 } catch (IOException e) {
                     failCre.add(file);
                     e.printStackTrace();
@@ -50,10 +54,10 @@ public class Create {
      * 根据固定的规则进行字符串的创建指定数量的目录
      *
      * @param fileOut 文件输出位置
-     * @param rule
-     * @param isMkDir
-     * @param dirNum
-     * @return
+     * @param rule 用户定义命名文件规则
+     * @param isMkDir 选择创建目录或者文件
+     * @param dirNum 创建的数量
+     * @return 返回创建失败的文件或目录
      */
     public static ArrayList<File> createDirOrFileByRule(String fileOut, String rule, boolean isMkDir, int dirNum) {
         //初始条件筛选
@@ -76,19 +80,21 @@ public class Create {
         //进行多个文件或者目录的创建
         for (int len = 0; len < dirNum; len++) {
             StringBuilder builder = new StringBuilder();
-
-
             //获取规则字符串的拼接
             getRuleBuild(list, split, length, listSize, builder);
 
             File file = null;
             if (isMkDir) {
                 file = new File(fileOut + "\\\\" + builder.toString());
-                file.mkdirs();
+                if (!file.mkdirs()) {
+                    failCre.add(file);
+                }
             } else {
                 try {
                     file = new File(fileOut + "\\\\" + builder.toString());
-                    boolean newFile = file.createNewFile();
+                    if (!file.createNewFile()) {
+                        failCre.add(file);
+                    }
                 } catch (IOException e) {
                     failCre.add(file);
                     e.printStackTrace();

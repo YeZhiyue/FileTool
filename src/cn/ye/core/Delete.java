@@ -1,12 +1,10 @@
 package cn.ye.core;
 
-import cn.ye.data_structure.QueueLinked;
 import cn.ye.data_structure.StackLinked;
 import cn.ye.model.fileModle;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class Delete {
     private static ArrayList<File> failCre;

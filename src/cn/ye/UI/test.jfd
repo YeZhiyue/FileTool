@@ -1,0 +1,91 @@
+JFDML JFormDesigner: "6.0.2.0.116" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :p:120:p, comp toolBar1:::p:295:p, space :::p, comp tabbedPane1:::p:334:p, par l {seq {space :p:96:p, comp layeredPane1:::p:100:p}, seq {space :::p, comp internalFrame1:::p::p}}, space :p:82:p, comp desktopPane1:::p:100:p}, seq l {space :p:68:p, comp desktopPane2:::p:379:p}, seq l {space :p:28:p, comp splitPane1:::p::p}}"
+			"$verticalGroup": "par l {seq {space :::p, comp splitPane1:::p::p, space :p:34:p, par t {seq {par l {seq l {space :p:63:p, comp layeredPane1:::p:100:p}, par t:l {comp desktopPane1:::p:100:p, comp tabbedPane1:::p:205:p}}, space :::x, comp toolBar1:::p:143:p}, comp internalFrame1:::p::p}, space :p:102:p, comp desktopPane2:::p:212:p, space :0:0:x}}"
+		} ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+				name: "tabbedPane1"
+				add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+					name: "tabbedPane2"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {space :0:334:x}"
+						"$verticalGroup": "par l {space :0:141:x}"
+					} ) {
+						name: "panel1"
+					}, new FormLayoutConstraints( null ) {
+						"title": "text"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {space :0:334:x}"
+						"$verticalGroup": "par l {space :0:141:x}"
+					} ) {
+						name: "panel2"
+					}, new FormLayoutConstraints( null ) {
+						"title": "text"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {space :0:334:x}"
+						"$verticalGroup": "par l {space :0:141:x}"
+					} ) {
+						name: "panel3"
+					}, new FormLayoutConstraints( null ) {
+						"title": "text"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "text"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JLayeredPane", new FormLayoutManager( class javax.swing.JLayeredPane ) ) {
+				name: "layeredPane1"
+				add( new FormContainer( "javax.swing.JLayeredPane", new FormLayoutManager( class javax.swing.JLayeredPane ) ) {
+					name: "layeredPane2"
+				}, new FormLayoutConstraints( null ) {
+					"x": 30
+					"y": 20
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JDesktopPane", new FormLayoutManager( class javax.swing.JDesktopPane ) ) {
+				name: "desktopPane1"
+			} )
+			add( new FormContainer( "javax.swing.JDesktopPane", new FormLayoutManager( class javax.swing.JDesktopPane ) ) {
+				name: "desktopPane2"
+			} )
+			add( new FormContainer( "javax.swing.JInternalFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {space :0:100:x}"
+				"$verticalGroup": "par l {space :0:100:x}"
+			} ) {
+				name: "internalFrame1"
+				"visible": true
+			} )
+			add( new FormContainer( "javax.swing.JToolBar", new FormLayoutManager( class javax.swing.JToolBar ) ) {
+				name: "toolBar1"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button1"
+					"text": "text"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JSplitPane", new FormLayoutManager( class javax.swing.JSplitPane ) ) {
+				name: "splitPane1"
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField1"
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "left"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "text"
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "right"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 920, 710 )
+		} )
+	}
+}
